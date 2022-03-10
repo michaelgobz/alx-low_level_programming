@@ -4,7 +4,7 @@
 /**
  * main - Entry point
  *
- * writing thing to the standard Error based the  oldest OS UNIX built by ginious 
+ * writing thing to the standard Error based the  oldest OS UNIX built by ginious
  *
  * Description: 'and that piece of art is useful" - Dora Korpar, 2015-10-19'
  *
