@@ -3,8 +3,7 @@
 /**
  * print_alphabet_x10 - prints alphabets 10
  *
- * @params void  no  return type
- * Description: prints 10 times
+ * Description: prints 10 times return type is void
  * Return: Always(0).
  */
 
