@@ -1,0 +1,1 @@
+Using the melloc function to dynamically allocate memory
