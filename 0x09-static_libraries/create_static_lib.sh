@@ -1,1 +1,3 @@
-#!/usr/bin/env bash/bin/bash
+#!/bin/bash
+gcc -Wall -pedantic -Werror -Wextra -c *.c
+ar -crs liball.a *.o
