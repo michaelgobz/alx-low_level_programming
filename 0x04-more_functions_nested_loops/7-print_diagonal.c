@@ -1,17 +1,28 @@
+
 #include "main.h"
 /**
- * print_line - draws a straight line in the terminal
- * @n: number of times underscore is printed
+ * print_diagonal - draws a diagonal line
+ * @n: number of times the '\' char is printed
  */
-void print_line(int n)
+void print_diagonal(int n)
 {
-	int c = 0;
+	int c, i;
 
-	while (c < n)
+	c = 0;
+
+	while (n > 0)
 	{
-		_putchar('_');
-
+		i = c;
+		while (i > 0)
+		{
+			_putchar(' ');
+			i--;
+		}
+		_putchar('\\');
+		_putchar('\n');
 		c++;
+		n--;
 	}
-	_putchar('\n');
+	if (c < 1)
+		_putchar('\n');
 }
