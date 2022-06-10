@@ -1,48 +1,24 @@
 #include "lists.h"
 
 /**
- * insert_dnodeint_at_index - Adds node at an idx with n data
- * @h: Pointer to the pointed list
- * @idx: Position where the node will be inserted
- * @n: Value of the node data
- * Return: Address of the pointed
+ * sum_dlistint - Prints all the elements of the list
+ * @head: Pointer to the list
+ * Return: Sum of all data in a list
 **/
-dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
+int sum_dlistint(dlistint_t *head)
 {
-	dlistint_t *node, *tmp = *h;
-	unsigned int i;
+	dlistint_t *node = head;
+	int i = 0, sum = 0;
 
-	if (h == NULL)
-		return (NULL);
-	if (idx == 0)
+	if (head == NULL)
+		return (0);
+	while (node != NULL)
 	{
-		node = add_dnodeint(h, n);
-		return (node);
+		i++;
+		sum += node->n;
+		node = node->next;
 	}
 
-	for (i = 1; i < idx; i++)
-	{
-		tmp = tmp->next;
-		if (tmp == NULL)
-			return (NULL);
-	}
-
-	if (tmp->next == NULL)
-	{
-		node = add_dnodeint_end(h, n);
-		return (node);
-	}
-
-	node = malloc(sizeof(dlistint_t));
-	if (node == NULL)
-		return (NULL);
-
-	node->n = n;
-
-	node->prev = tmp;
-	node->next = tmp->next;
-	tmp->next->prev = node;
-	tmp->next = node;
-
-	return (node);
+	return (sum);
 }
+
