@@ -1,13 +1,14 @@
-#include<stdio.h>
-
+#include <stdio.h>
+#include <math.h>
 /**
  * find_radius - finds the radius 
  * @v: Associated volume of the solid
+ * @h: Associated  height
  * Return: radius */
 
 double find_radius(double v ,double h){
 double pie = 3.143;
-double radius = (v/(pie * h)) ** 0.5;
+double radius = pow((v/(pie * h)), 0.5);
 return radius;
 }
 
