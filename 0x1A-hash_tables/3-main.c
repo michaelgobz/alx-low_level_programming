@@ -17,4 +17,3 @@ int main(void)
 	hash_table_set(ht, "hetairas", "mentioner");
 	return (EXIT_SUCCESS);
 }
-
